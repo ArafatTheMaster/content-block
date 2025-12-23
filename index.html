@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	
+	<script type="text/JavaScript">
+			// Courtesy OF MD ARAFAT
+			function killCopy(e){
+			return false
+			}
+			function reEnable(){
+			return true
+			}
+			document.onselectstart=new Function ("return false")
+			if (window.sidebar){
+			document.onmousedown=killCopy
+			document.onclick=reEnable
+			}
+	</script>
+	<title>Disable Right Click & F12 on your website | Copy Cut Past</title>
+	
+	<!-- Jquery Needed for F12 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	
+	
+	
+	
+	<h1>Hello Md Arafat</h1>
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  // Disable Right Click
+  window.oncontextmenu = () => false;
+
+  document.addEventListener("keydown", function(e){
+
+    // F12
+    if(e.key === "F12"){
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl + S (Save Page)
+    if(e.ctrlKey && (e.key === "s" || e.key === "S")){
+      e.preventDefault();
+      alert("Saving this page is disabled!");
+      return false;
+    }
+
+    // Ctrl + U (View Source)
+    if(e.ctrlKey && (e.key === "u" || e.key === "U")){
+      e.preventDefault();
+      return false;
+    }
+
+    // Ctrl + Shift + I / J (DevTools)
+    if(e.ctrlKey && e.shiftKey && 
+       (e.key === "I" || e.key === "J")){
+      e.preventDefault();
+      return false;
+    }
+  });
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
